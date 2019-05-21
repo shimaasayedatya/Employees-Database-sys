@@ -1,0 +1,45 @@
+<div *ngIf="employees.length>0; else elseBlock">
+<table class="table table-inverse">
+  <thead>
+    <tr>
+      <th >First Name</th>
+      <th>Last Name</th>
+      <th >email</th>
+      <th >country</th>
+      <th >city</th>
+      <th >phone</th>
+      <th >salary</th>
+      <th >ID</th>
+            <th > </th>
+
+
+    </tr>
+  </thead> 
+  <tbody>
+    <tr *ngFor="let item of employees">
+      <th >{{item.firstName}}</th>
+      <th >{{item.lastName}}</th>
+      <th >{{item.email}}</th>
+      <th >{{item.country}}</th>
+      <th >{{item.city}}</th>
+      <th >{{item.phone}}</th>
+      <th >{{item.salary}}</th>
+      <th >{{item.$key}}</th>
+
+
+
+
+      <th> <a href="#" class="btn btn-primary">more  <i class="fa fa-info-circle"></i>
+      </a></th>
+
+    
+  </tbody>
+</table>
+</div>
+<ng-template #elseBlock><h2>OOPS ! empty database</h2></ng-template>
+
+
+
+
+
+
